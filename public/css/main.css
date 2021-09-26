@@ -1,0 +1,146 @@
+/*content*/
+
+.main-ppal{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.last-visit{
+    background-color: #ebebeb;
+}
+
+.titulares{
+    font-size: 24px;
+}
+
+article.main-article{
+    background-color: #fff;
+    width: 100%;
+    margin-bottom: 10px;
+  
+}
+
+
+div .articulos-ppales {
+    width: 100%;
+    border-top: solid #ebebeb 1px;
+    padding: 15px;
+    position: relative;
+}
+
+div.precio-descuento{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;;
+}
+
+.precios{
+    font-size: 18px;
+    width: 30%;
+}
+
+.descuentos{
+    font-size: 16px;
+    width: 71%;
+    text-align: right;
+    color: #39b54a;
+}
+
+
+main section article .descripciones {
+    font-size: 16px;
+    display: none;
+    color: #666
+  
+}
+
+.offers{
+    background-color: #ebebeb;
+}
+
+
+main section article{
+    background-color: #fff;
+}
+
+main section article img{
+    width: 100%;
+}
+
+.fa-truck{
+    display: block;
+    font-size: 16px;;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: #FFF;
+    border-radius: 50%;
+    border: solid #39b54a 1px;
+    color: #39b54a; 
+    position: absolute;
+    right: 20px;
+    top: -15px;
+    transition: transform 0.1s;
+}
+
+
+
+@media (min-width: 361px){
+    .products{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .products article{
+        width: 45%;
+        justify-content: space-between;
+    }
+    .precio-descuento .precios,.precio-descuento .descuentos{
+        font-size: 0.9rem;
+    }
+
+    main section article:hover .descripciones{
+        display: block;    
+    }
+
+    article.main-article:hover{
+        box-shadow: 0 0 10px rgb(100,100,100);
+    }
+      
+    article.main-article:hover .fa-truck{
+        transform: rotate(90deg);
+    }
+}
+
+@media (min-width: 480px){
+    .descuentos{
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px){
+    .products{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .products article{
+        width: 22%;
+    }
+    .precio-descuento .precios,.precio-descuento .descuentos{
+        font-size: 0.8rem;
+    }
+
+    .precio-descuento .descuentos{
+        text-align: center;
+    }
+    
+}
+
+@media (min-width: 1200px){
+    .precio-descuento .precios,.precio-descuento .descuentos{
+        font-size: 1.2rem;
+    }
+
+
+}

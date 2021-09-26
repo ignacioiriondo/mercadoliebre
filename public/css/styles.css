@@ -1,0 +1,26 @@
+/*Estilos en general*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url(/css/header.css);
+@import url(/css/main.css);
+@import url(/css/footer.css);
+@import url(/css/register.css);
+@import url(/css/login.css);
+
+
+* {
+    font-family: Roboto;
+    box-sizing: border-box;
+}
+   
+
+body {
+    background-color: #ebebeb;
+}
+
+
+
+
+
+
+
