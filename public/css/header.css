@@ -4,15 +4,17 @@
     padding:20px;
 }
 
+
+
 .main-header-top-bar{
     display: flex;
     flex-wrap: wrap;
 }
 
-
-.logo-mercado-liebre{
+a.logo-mercado-liebre{
     width: 45%;
 }
+
 
 .search div{
     width: 20%;
@@ -127,7 +129,7 @@ section.banner img{
         margin: auto;
     }
 
-    .logo-mercado-liebre{
+    a.logo-mercado-liebre{
         width: 200px;
         padding-right: 5px;
     }

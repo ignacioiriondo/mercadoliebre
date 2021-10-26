@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Include Head -->
+<%- include('partials/head')  %>
+<!-- Include Head -->
+
+<body>
+    <!-- Header -->
+	<%- include('partials/header')  %>
+	<!-- /Header -->
+
+    <section class="banner">
+        <img src="../../images/img-home-banner.jpg" alt="Banner de ofertas">
+    </section>
+
+    <main class="main-ppal">
+        <section class="last-visit">
+
+            <h3 class="titulares">Basado en tu última visita</h3>
+            
+            <div class="products">
+                <% productsList.forEach(product =>{ %>
+                <article class="main-article">
+                    
+                    <img src="../../images/<%= product.image %>" alt="Cafetera moulinex">
+                    <div class="articulos-ppales">
+                        <i class="fas fa-truck"></i>
+                        <div class="precio-descuento">
+                            <p class="precios"><%= product.price %></p>
+                            <p class="descuentos"><%= product.discount %></p>
+                        </div>
+                        <h4 class="descripciones"><%= product.description %></h4>
+                    </div>    
+                </article>     
+                <% }) %>   
+            </div>
+
+        </section>
+
+        <section class="offers">
+
+            <h3 class="titulares">Ofertas</h3>
+
+            <div class="products">
+                
+                <% productsList.forEach(product =>{ %>
+                    <article class="main-article">
+                        
+                        <img src="../../images/<%= product.image %>" alt="Cafetera moulinex">
+                        <div class="articulos-ppales">
+                            <i class="fas fa-truck"></i>
+                            <div class="precio-descuento">
+                                <p class="precios"><%= product.price %></p>
+                                <p class="descuentos"><%= product.discount %></p>
+                            </div>
+                            <h4 class="descripciones"><%= product.description %></h4>
+                        </div>    
+                    </article>     
+                <% }) %> 
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <%- include('partials/footer')  %>
+
+    <!-- /footer -->
+    
+</body>
+
+</html>
