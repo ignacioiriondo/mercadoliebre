@@ -10,17 +10,39 @@
 
 
     <main>
+        <!-- Locals es un objeto literal que siempre existe en todas las vistas. oneError es cada un0 de las propiedas del objeto literal errors-->
+        
         <form action="/users/register" method="POST" enctype="multipart/form-data"> <!--enctype solo en caso de que tengamos imagenes-->
             <div class="form-control"> 
                 <label for=""><h4>Nombre y Apellido</h4></label>
-                <input type="text" name="fullname" placeholder="Nombre y apellido" style="font-style:italic">
-                <span style="color: red; font-size: 10px; font-style:italic">Debés ingresar nombre y apellido</span>
+                <input 
+                type="text" 
+                name="fullname" 
+                placeholder="Nombre y apellido" 
+                style="font-style:italic"
+                value="<%= locals.oldData ? oldData.fullname : null %>"
+                >
+                <span style="color: red; font-size: 10px; font-style:italic">
+                    <% if (locals.errors && errors.fullname) { %>  
+                        <%= errors.fullname.msg %> 
+                    <% } %>
+                </span>
             </div>
 
             <div class="form-control"> 
                 <label for=""><h4>E-mail</h4></label>
-                <input type="text" name="email" placeholder="E-mail" style="font-style:italic">
-                <span style="color: red; font-size: 10px; font-style:italic">Debés ingresar e-mail</span>
+                <input 
+                type="text" 
+                name="email" 
+                placeholder="E-mail" 
+                style="font-style:italic"
+                value="<%= locals.oldData ? oldData.email : null %>"
+                >
+                <span style="color: red; font-size: 10px; font-style:italic">
+                    <% if (locals.errors && errors.email) { %>  
+                        <%= errors.email.msg %> 
+                    <% } %>
+                </span>
             </div>
 
             <div class="form-control"> 
@@ -71,21 +93,46 @@
             <div class="form-control"> 
                 <label for=""><h4>Avatar</h4></label>
                 <input type="file" name="avatar">
+                <span style="color: red; font-size: 10px; font-style:italic">
+                    <% if (locals.errors && errors.avatar) { %>  
+                        <%= errors.avatar.msg %> 
+                    <% } %>
+                </span>
             </div>
 
             <div class="form-control"> 
                 <label for=""><h4>Contraseña</h4></label>
-                <input type="password" name="password" placeholder="Contraseña" style="font-style:italic">
+                <input 
+                type="password" 
+                name="password" 
+                placeholder="Contraseña" 
+                style="font-style:italic"
+                value="<%= locals.oldData ? oldData.password : null %>"
+                >
             </div>
-            <span style="color: red; font-size: 10px; font-style:italic">La contraseña debe tener como mínimo 8 caracteres, 2 números, 1 carácter especial, 1 letra mayúsucla y 1 minúscula</span>
+            <span style="color: red; font-size: 10px; font-style:italic">
+                <% if (locals.errors && errors.password) { %>  
+                    <%= errors.password.msg %> 
+                <% } %>
+            </span>
+
             <div class="form-control"> 
                 <label for=""><h4>Repetir contraseña</h4></label>
-                <input type="password" name="repassword" placeholder="Repetir contraseña" style= "font-style:italic">
-                <span style="color: red; font-size: 10px; font-style:italic">Reingresar contraseña</span>
+                <input 
+                type="password" 
+                name="repassword" 
+                placeholder="Repetir contraseña" 
+                style= "font-style:italic"
+                value="<%= locals.oldData ? oldData.repassword : null %>"
+                >
+                <span style="color: red; font-size: 10px; font-style:italic">
+                   <% if (locals.errors && errors.repassword) { %>  
+                        <%= errors.repassword.msg %> 
+                    <% } %>
+                </span>
             </div>
 
-        
-           
+                   
             <button type="submit" class="enviar">Registrate</button>
             <button type="reset" class="borrar">Borrar</button>
 
