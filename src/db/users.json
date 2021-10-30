@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "fullname": "Ignacio",
+        "email": "nacho@gmail.com",
+        "birthday": "2021-10-15",
+        "perfil": "comprador",
+        "interes": "moda",
+        "password": "$2a$10$I9Lyp1NGqJZfVCdOc7BF4u1wvGDlPYo/vjXs9iEbNQ5jXq/1jOsZC",
+        "repassword": "$2a$10$bBgtTxy/T.2srbqTpb9pLe3e3wNoVXanaL2xqt9mFasln8oZ3N/LK",
+        "avatar": "1635443102046_img.png"
+    },
+    {
+        "id": 2,
+        "fullname": "Pedro Sancehz",
+        "email": "pedro@gmail.com",
+        "birthday": "2021-10-14",
+        "perfil": "vendedor",
+        "interes": "moda",
+        "password": "$2a$10$UNH0JEi5s4ey0418xeKzMORr34V9PjXJCQ5pti7BVRsw.1EfhwYem",
+        "repassword": "$2a$10$eKqsb23.HJkJX85OK9jAdeJQRCZK1kCpw6ghy5xl7hORnDfgitxDm",
+        "avatar": "1635517194514_img.png"
+    }
+]

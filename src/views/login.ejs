@@ -8,21 +8,35 @@
 	<%- include('partials/header')  %>
 	<!-- /Header -->
     <main>
-        <form action="/users/login" method="POST" enctype="multipart/form-data"> <!--enctype solo en caso de que tengamos imagenes-->
+        <form action="/users/login" method="POST"> <!--enctype solo en caso de que tengamos imagenes-->
            
             <div class="form-control"> 
                 <label for=""><h4>E-mail</h4></label>
-                <input type="text" name="email" placeholder="E-mail" style="font-style:italic">
-                <span style="color: red; font-size: 10px; font-style:italic">Debés ingresar e-mail</span>
+                <input 
+                type="text" 
+                name="email" 
+                placeholder="E-mail" 
+                style="font-style:italic"
+                >
+                    <span style="color: red; font-size: 10px; font-style:italic">
+                        <% if (locals.errors && errors.email) { %>
+                            <%= errors.email.msg %>  
+                        <% } %>
+                    </span>  
             </div>
         
             
 
             <div class="form-control"> 
                 <label for=""><h4>Contraseña</h4></label>
-                <input type="password" name="password" placeholder="Contraseña" style="font-style:italic">
+                <input 
+                type="password" 
+                name="password" 
+                placeholder="Contraseña" 
+                style="font-style:italic"
+                >
             </div>
-            <span style="color: red; font-size: 10px; font-style:italic">Contraseña incorrecta</span>
+            
                           
             <button type="submit" class="enviar-login">Enviar</button>
            

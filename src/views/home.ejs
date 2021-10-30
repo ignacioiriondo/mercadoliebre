@@ -11,17 +11,21 @@
 	<%- include('partials/header')  %>
 	<!-- /Header -->
 
+	<!-- /Banner -->
     <section class="banner">
         <img src="../../images/img-home-banner.jpg" alt="Banner de ofertas">
     </section>
+    	
+    <!-- /Banner -->
 
     <main class="main-ppal">
+        <!-- ultima visita -->
         <section class="last-visit">
 
             <h3 class="titulares">Basado en tu última visita</h3>
-            
+            <!-- Show the "visited" products -->
             <div class="products">
-                <% productsList.forEach(product =>{ %>
+                <% visited.forEach(product => { %>
                 <article class="main-article">
                     
                     <img src="../../images/<%= product.image %>" alt="Cafetera moulinex">
@@ -38,14 +42,14 @@
             </div>
 
         </section>
-
+        <!-- en oferta -->
         <section class="offers">
-
+        <!-- Show the "in-sale" products -->
             <h3 class="titulares">Ofertas</h3>
 
             <div class="products">
                 
-                <% productsList.forEach(product =>{ %>
+                <% insale.forEach(product =>{ %>
                     <article class="main-article">
                         
                         <img src="../../images/<%= product.image %>" alt="Cafetera moulinex">
