@@ -1,9 +1,10 @@
 const express = require ('express');
-const app = express ();
 const path = require ('path');
-const session = require ('express-session');
+const session = require ('express-session'); //todo aquello que se guarda del lado del servidor
+const cookies = require ('cookie-parser'); //todo aquello que se guarda del lado del cliente/navegador
 //const methodOverride = require('method-override');
 
+const app = express ();
 
 //config tempalte
 app.set('view engine', 'ejs');
@@ -22,6 +23,14 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
 }))
+
+//middleware de aplicación. Este middlware va despues de se inicialice la sesión
+const userLoggedMiddleware = require ('./middlewares/userLoggedMiddleware')
+
+app.use(cookies());//esto me permite trabajar con cookie en req y res con un objeto literal
+
+app.use(userLoggedMiddleware);
+
 
 
 //config routes

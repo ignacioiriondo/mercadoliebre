@@ -12,11 +12,15 @@ const User = require ('../models/User.js')
 let controller = {
 
     register: (req,res) => {
+        //res.cookie metodo en el response que me permite guardar algo en el navegador
         res.render('register');
     },
 
     login: (req,res) => {
+        //aqui leo la cookie
+        
         res.render('login');
+
     },
 
     loginProcess: (req,res) => {
@@ -24,15 +28,20 @@ let controller = {
         let userToLogin = User.findByField('email',req.body.email);
         if (userToLogin){
             //queremos guardar al usuario en session
-            
-            
+
             req.session.userLogged = userToLogin;
             let passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password)
             if (passwordOk){
-                return res.redirect('/users/profile')
-
+                
+                if(req.body.remember_user) {
+                    res.cookie('userEmail', req.body.email,{ maxAge: (1000 * 60)})
+                }
+                
+             return res.redirect('/users/profile')
+                       
             }
-            return res.render ('login', {
+
+               return res.render ('login', {
                 errors: {
                     email: {
                         msg: 'Las credenciales son inválidas'
@@ -54,7 +63,7 @@ let controller = {
         const resultValidation = validationResult(req);//es un objeto literal que tiene dentro la propiedad errors que es un array
         //res.send(resultValidation)
         
-        if (resultValidation.errors.length>0) {
+        if (resultValidation.errors.length>0) { //se podría haber usado el método isEmpty()
             return res.render('register', {
                 errors: resultValidation.mapped(), //convierte el array en un objeto literal
                 oldData: req.body
@@ -81,6 +90,7 @@ let controller = {
             avatar: req.file.filename
         }
 
+        User.create(userToCreate);//crea el usuario
 
         return res.redirect('/');
         
@@ -91,8 +101,8 @@ let controller = {
         });
     },
     logout: (req, res) => {
+        res.clearCookie('userEmail');
         req.session.destroy();
-        console.log(req.session);
         return res.redirect('/')
     }
 }

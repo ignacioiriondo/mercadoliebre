@@ -24,8 +24,17 @@
         </ul>
 
         <ul>
+            <% if (locals.isLogged) { %>
+                                      
+            <li>
+                <!-- <img src="/avatars/<%= locals.userLogged.avatar %>" width="40" style="border-radius: 100%;">-->
+                <a href="/users/profile">Hola <%= locals.userLogged.fullname %> <i class="fas fa-user"></i></a>
+            
+            </li>
+            <% } else { %>
             <li><a href="/users/register">Crea tu cuenta <i class="far fa-id-card"></i></a></li>
             <li><a href="/users/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
+            <% } %>
             <li><a href="#">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
         </ul>
     </nav>
