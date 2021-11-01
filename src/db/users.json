@@ -9,5 +9,16 @@
         "password": "$2a$10$EOxrPdY5WIgw7Z4h20A6S.Q2/WLTAAHCcRYDQR4RGpco8p3nQm9hS",
         "repassword": "$2a$10$NOi0XHqqkkB3L7O3ce5Zj.0MJUa2A8EtBFpsIkYcH/t0xGZcOezUW",
         "avatar": "1635712463093_img.jpg"
+    },
+    {
+        "id": 2,
+        "fullname": "Dwight Schrute",
+        "email": "dw@gmail.com",
+        "birthday": "2021-11-25",
+        "perfil": "vendedor",
+        "interes": "healthy",
+        "password": "$2a$10$QfikqFuipQzmeGI1E.6nbOffsf8./EAr.9JyardZzwpBNUcoQXT4a",
+        "repassword": "$2a$10$8eEx1ZPIPxAqHAvyrP4RFO1DVNW4mOrBJwDAX39pCxI6CeLpFS2vS",
+        "avatar": "1635774953347_img.jpg"
     }
 ]

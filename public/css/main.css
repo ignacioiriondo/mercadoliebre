@@ -49,8 +49,12 @@ div.precio-descuento{
 
 main section article .descripciones {
     font-size: 16px;
-    display: none;
-    color: #666
+    color: #666;
+    transition: 300ms;
+    overflow: hidden;
+    margin: 0;
+    height: 0;
+    
   
 }
 
@@ -81,6 +85,7 @@ main section article img{
     right: 20px;
     top: -15px;
     transition: transform 0.5s;
+   
 }
 
 
@@ -100,7 +105,8 @@ main section article img{
     }
 
     main section article:hover .descripciones{
-        display: block;    
+        height: 40px;
+        margin-top: 15px;  
     }
 
     article.main-article:hover{

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Include Head -->
+<%- include('../partials/head')  %>
+<!-- Include Head -->
+<body>
+   	 <!-- Header -->
+	<%- include('../partials/header')  %>
+	<!-- /Header -->
+
+
+    <main>
+        <!-- Locals es un objeto literal que siempre existe en todas las vistas. oneError es cada un0 de las propiedas del objeto literal errors-->
+        
+        <form action="/products/create" method="POST" enctype="multipart/form-data"> <!--enctype solo en caso de que tengamos imagenes-->
+            <div class="form-control-create"> 
+                <h2>Formulario de creación de producto</h2>
+                <label for=""><h4>Nombre del producto:</h4></label>
+                <input 
+                type="text" 
+                name="fullname" 
+                placeholder="Ej: Notebook Lenovo" 
+                style="font-style:italic"
+                >
+                <span style="color: red; font-size: 10px; font-style:italic">
+                   
+                </span>
+            </div>
+
+            <div class="form-control-create"> 
+                <label for=""><h4>Precio del producto:</h4></label>
+                <input 
+                type="text" 
+                name="price" 
+                placeholder="Ej: 4575" 
+                style="font-style:italic"
+                
+                >
+                <span style="color: red; font-size: 10px; font-style:italic">
+                    
+                </span>
+            </div>
+
+            <div class="form-control-create"> 
+                <label for=""><h4>Descuento:</h4></label>
+                <input 
+                type="text" 
+                name="discount" 
+                placeholder="Ej: 25% off" 
+                style="font-style:italic"
+                
+                >
+                <span style="color: red; font-size: 10px; font-style:italic">
+                    
+                </span>
+            </div>
+
+            
+            <div class="form-control-create"> 
+                <label for=""><h4>Categoría:</h4></label>
+                    <select name="category">
+                        <option disabled selected class="seleccion-opcion">Seleccioná una opción</option>
+                        <option value="in-sale">En Oferta</option>
+                        <option value="visited">Ultimos agregados</option>
+                    </select>
+            </div>
+
+           
+            <div class="form-control-create"> 
+                <label for=""><h4>Imágen producto:</h4></label>
+                <input type="file" name="image">
+                <span style="color: red; font-size: 10px; font-style:italic">
+                   
+                </span>
+            </div>
+
+            <div class="form-control-create"> 
+                <label for="description"><h4>Descripción producto:</h4></label>
+                <textarea  name="description"></textarea>
+                
+            </div>
+           
+                  
+            <button type="submit" class="enviar">Guardar producto</button>
+            
+
+        
+        </form>
+
+
+
+
+    </main>
+
+    <!-- footer -->
+    <%- include('../partials/footer')  %>
+
+    <!-- /footer -->
+    
+</body>
+</html>

@@ -13,13 +13,13 @@ let controller = {
 
     register: (req,res) => {
         //res.cookie metodo en el response que me permite guardar algo en el navegador
-        res.render('register');
+        res.render('users/register');
     },
 
     login: (req,res) => {
         //aqui leo la cookie
         
-        res.render('login');
+        res.render('users/login');
 
     },
 
@@ -41,7 +41,7 @@ let controller = {
                        
             }
 
-               return res.render ('login', {
+               return res.render ('users/login', {
                 errors: {
                     email: {
                         msg: 'Las credenciales son inválidas'
@@ -49,7 +49,7 @@ let controller = {
                 }
             });
         }
-        return res.render ('login', {
+        return res.render ('users/login', {
             errors: {
                 email: {
                     msg: 'No se encuentra este email en nuestra base de datos'
@@ -64,7 +64,7 @@ let controller = {
         //res.send(resultValidation)
         
         if (resultValidation.errors.length>0) { //se podría haber usado el método isEmpty()
-            return res.render('register', {
+            return res.render('users/register', {
                 errors: resultValidation.mapped(), //convierte el array en un objeto literal
                 oldData: req.body
             });
@@ -72,7 +72,7 @@ let controller = {
         // validación: buscar usuario por email en la base de datos
         let userInDb = User.findByField('email', req.body.email);
         if (userInDb) {
-            return res.render('register', {
+            return res.render('users/register', {
                 errors: {
                     email: {
                         msg: 'Este email ya está registrado'
@@ -96,7 +96,7 @@ let controller = {
         
     },
     profile: (req, res) => {
-      	return res.render('userProfile',{
+      	return res.render('users/userProfile',{
             user: req.session.userLogged
         });
     },

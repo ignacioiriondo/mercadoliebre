@@ -2,8 +2,8 @@
     {
         "id": 1,
         "image": "img-cafetera-moulinex.jpg",
-        "price": "$6770",
-        "discount": "40% off",
+        "price": "6770",
+        "discount": "40",
         "description": "Cafetera Moulinex",
         "category": "visited",
         "name": "Cafetera"
@@ -11,8 +11,8 @@
     {
         "id": 2,
         "image": "img-macbook-pro-2019.jpg",
-        "price": "$230.000",
-        "discount": "20% off",
+        "price": "230.000",
+        "discount": "20",
         "description": "MacBook Pro 2019",
         "category": "visited",
         "name": "Computadora"
@@ -20,8 +20,8 @@
     {
         "id": 3,
         "image": "img-samsung-galaxy-s10.jpg",
-        "price": "$70.500",
-        "discount": "10% off",
+        "price": "70.500",
+        "discount": "10",
         "description": "Samsung Galaxy S10",
         "category": "visited",
         "name": "Telefono"
@@ -29,8 +29,8 @@
     {
         "id": 4,
         "image": "img-tv-samsung-smart.jpg",
-        "price": "$23.200",
-        "discount": "5% off",
+        "price": "23.200",
+        "discount": "5",
         "description": "SmartTv Samsung 43",
         "category": "visited",
         "name": "SmartTV"
@@ -38,8 +38,8 @@
     {
         "id": 5,
         "image": "img-cafetera-moulinex.jpg",
-        "price": "$6770",
-        "discount": "40% off",
+        "price": "6770",
+        "discount": "40",
         "description": "Cafetera Moulinex",
         "category": "in-sale",
         "name": "Cafetera"
@@ -47,8 +47,8 @@
     {
         "id": 6,
         "image": "img-macbook-pro-2019.jpg",
-        "price": "$230.000",
-        "discount": "20% off",
+        "price": "230.000",
+        "discount": "20",
         "description": "MacBook Pro 2019",
         "category": "in-sale",
         "name": "Computadora"
@@ -56,8 +56,8 @@
     {
         "id": 7,
         "image": "img-samsung-galaxy-s10.jpg",
-        "price": "$70.500",
-        "discount": "10% off",
+        "price": "70.500",
+        "discount": "10",
         "description": "Samsung Galaxy S10",
         "category": "in-sale",
         "name": "Telefono"
@@ -65,10 +65,19 @@
     {
         "id": 8,
         "image": "img-tv-samsung-smart.jpg",
-        "price": "$23.200",
-        "discount": "5% off",
+        "price": "23.200",
+        "discount": "5",
         "description": "SmartTv Samsung 43",
         "category": "in-sale",
         "name": "SmartTV"
+    },
+    {
+        "id": 9,
+        "fullname": "Notebook lenovo",
+        "price": "4000",
+        "discount": "25",
+        "category": "in-sale",
+        "description": "fsadfad",
+        "image": "product-1635789944304_img.jpg"
     }
 ]

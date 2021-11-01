@@ -31,14 +31,15 @@ app.use(cookies());//esto me permite trabajar con cookie en req y res con un obj
 
 app.use(userLoggedMiddleware);
 
-
-
 //config routes
 const mainRouter = require('./routes/main');
 const userRouter = require('./routes/user')
+const productRouter = require('./routes/products')
 
 app.use('/', mainRouter);
 app.use('/users', userRouter)
+app.use('/products', productRouter)
+
 
 
 app.listen( process.env.PORT || 3000  , () => console.log('Server corriendo en el puerto 3000'))
